@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Topics-Break_and_continue._Branching-For_loop_skipping_a_specified_count_and_ending_prematurely:main" external.linked.project.path="$MODULE_DIR$/../../../../../Topics/Break and continue. Branching/For loop skipping a specified count and ending prematurely" external.root.project.path="$MODULE_DIR$/../../../../.." external.system.id="GRADLE" external.system.module.group="Cinema Room Manager" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/../../../../../Topics/Break and continue. Branching/For loop skipping a specified count and ending prematurely/out/production/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../../Topics/Break and continue. Branching/For loop skipping a specified count and ending prematurely/src">
+      <sourceFolder url="file://$MODULE_DIR$/../../../../../Topics/Break and continue. Branching/For loop skipping a specified count and ending prematurely/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

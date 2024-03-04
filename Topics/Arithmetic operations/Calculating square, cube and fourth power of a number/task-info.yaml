@@ -1,0 +1,18 @@
+type: code
+files:
+  - name: src/Main.java
+    visible: true
+    text: "import java.util.Scanner;\n\npublic class Main {\n\n    public static void\
+    \ main(String args[]) {\n        // Create a Scanner object to read input\n  \
+    \      Scanner in = new Scanner(System.in);\n\n        // Read the next integer\n\
+    \        int n = in.nextInt(); \n\n        // Compute and print the square of\
+    \ n\n\n        // Compute and print the cube of n\n\n        // Compute and print\
+    \ the fourth power of n\n    }\n}'"
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/41187#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Fri, 16 Feb 2024 10:58:12 UTC"
+record: -1
+submission_language: java17

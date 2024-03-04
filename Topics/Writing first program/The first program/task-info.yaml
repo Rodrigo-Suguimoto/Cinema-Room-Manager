@@ -1,0 +1,20 @@
+type: code
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      class Main {
+      
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/3233#comment
+status: Solved
+feedback:
+  message: |-
+    <html>By typing out and debugging the code yourself, you take a significant step in your coding journey.
+    Keep experimenting and coding from scratch – and you'll be amazed at how quickly you grow.
+
+    </html>
+  time: "Wed, 14 Feb 2024 14:17:56 UTC"
+record: -1
+submission_language: java17

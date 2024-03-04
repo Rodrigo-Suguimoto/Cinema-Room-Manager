@@ -1,0 +1,35 @@
+type: matching
+captions:
+  - name
+  - statement
+  - keyword
+  - syntax
+  - comment
+options:
+  - is a word written by a programmer to identify something in a program
+  - ' is text that is not part of the program'
+  - is a set of rules that defines the combinations of symbols that are considered to
+    be a correctly structured program
+  - is a word that has a special meaning in the programming language
+  - is a single action terminated by semi-colon
+files:
+  - name: src/Task.java
+    visible: true
+    text: |
+      // You can experiment here, it won’t be checked
+      
+      public class Task {
+        public static void main(String[] args) {
+          // put your code here
+        }
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/3756#comment
+status: Solved
+record: -1
+ordering:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4

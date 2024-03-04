@@ -1,0 +1,31 @@
+type: code
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      import java.util.Scanner;
+      
+      public class Main {
+          // Declare the method 'countCharacters'
+          public static void countCharacters(String inputString) {
+              // Your code here
+          }
+      
+          public static void main(String[] args) {
+              Scanner scanner = new Scanner(System.in);
+              String inputString = scanner.nextLine();
+      
+              // Call 'countCharacters' method with the input string
+              countCharacters(inputString);
+      
+              scanner.close();
+          }
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/41270#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Thu, 15 Feb 2024 10:58:45 UTC"
+record: -1
+submission_language: java17

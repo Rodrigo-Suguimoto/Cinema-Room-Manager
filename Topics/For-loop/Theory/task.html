@@ -1,0 +1,76 @@
+<h2>For-loop</h2>
+<div class="step-text">
+<p>Sometimes we need to repeat a block of code a certain number of times. To do this, Java provides the <code class="language-java">for</code>-loop.  This loop is often used to iterate over a <a class="theory-lookup" href="/learn/step/18021" rel="noopener noreferrer nofollow" target="_blank" title="In Java, range refers to a sequence of values within a specific range, often used to represent a continuous set of data. | It can be implemented using various data structures such as arrays, lists, or custom classes. A range can be accessed, modified, and iterated over, making it a versatile tool for working with collections of data. The iterator design pattern can be used to provide a universal interface for accessing elements of any collection contained in a Java class, including ranges.">range</a> of values or through an array. If the number of iterations or the range borders are known, it is recommended to use the <code class="language-java">for</code>-loop. If they are unknown, the <code class="language-java">while</code>-loop may be the preferable solution.</p>
+<h5 id="the-basic-for-loop-syntax" style="text-align: center;">The basic for-loop syntax</h5>
+<p>The <code class="language-java">for</code>-loop has the following basic <a class="theory-lookup" href="/learn/step/3521" rel="noopener noreferrer nofollow" target="_blank" title="Syntax in Java refers to the set of rules that define how a program needs to be written in order to be valid. | It includes specific keywords that have special meanings in the programming language, which cannot be used as variable names in your own program. Identifiers or names are words that refer to something in a program, such as a variable or a function name. Comments are textual explanations of what the code does, starting with a semicolon. Whitespace includes all characters that are not visible, such as spaces, tabs, and newlines.">syntax</a>:</p>
+<pre><code class="language-java">for (initialization; condition; modification) {
+    // do something
+} </code></pre>
+<p>Parts of the loop:</p>
+<ul>
+<li>the <strong><a class="theory-lookup" href="/learn/step/3533" rel="noopener noreferrer nofollow" target="_blank" title="In Java, initialization statements are used to assign a value or a result of an expression to a variable during its declaration. | This can be done using the assignment operator '='. The initialization statement can also include an instance initialization block, which is executed before any constructor of a class and initializes all instances of that class. The use of var instead of a specific type for automatic type inference is a controversial feature in Java, as it can make the code more concise but may affect code readability.">initialization statement</a></strong> is executed once before the loop begins; usually, loop <a class="theory-lookup" href="/learn/step/3518" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a variable is a named storage location that is used to store a value of a specific type. | It is declared with a specific data type, which determines the kind of value that can be stored in it. Every variable has a unique name, also known as an identifier, which is used to access its value. Variables can be declared and initialized in a single statement, and their values can be accessed and modified throughout the program.">variables</a> are initialized here;</li>
+<li>the <strong>condition</strong> is a Boolean expression that determines the need for the next iteration; if it's <code class="language-java">false</code>, the loop terminates;</li>
+<li>the <strong>modification </strong>is a statement that changes the value of the loop variables; it is invoked after each iteration of the loop; usually, it uses <strong>increment or </strong><strong>decrement</strong> to modify the loop's variable.</li>
+</ul>
+<p>Inside the loop's <a class="theory-lookup" href="/learn/step/3521" rel="noopener noreferrer nofollow" target="_blank" title="In Java, the term 'body' refers to the section of a class, method, or lambda expression that contains the executable code. | It is enclosed by curly braces and represents the actions that will be performed when the class, method, or lambda expression is invoked. The body is where developers define the behavior of objects, class, or the whole program, and it can contain any valid Java code.">body</a>, the program can perform any correct Java statements. It can even contain other loops.</p>
+<p>The order of execution for any <a class="theory-lookup" href="/learn/step/3602" rel="noopener noreferrer nofollow" target="_blank" title="A 'for-loop' in Java is a control flow statement that allows you to repeatedly execute a block of code a specified number of times. | It consists of three parts: initialization, condition, and modification. The initialization part is executed once at the beginning of the loop, the condition part is evaluated before each iteration to determine whether to continue the loop, and the modification part is executed at the end of each iteration to update the loop variable.">for-loop</a> is always the same:</p>
+<ol>
+<li>the initialization statement;</li>
+<li>if the condition is <code class="language-java">false</code> then terminate the loop;</li>
+<li>if the condition is <code class="language-java">true</code>, then the loop's body is executed;</li>
+<li>the modification is performed;</li>
+<li>go to stage 2 (condition).</li>
+</ol>
+<p>Let's write a loop for <a class="theory-lookup" href="/learn/step/13775" rel="noopener noreferrer nofollow" target="_blank" title="In Java, 'print' is a statement used to display output to the console. | It writes the specified text or variable value to the standard output stream, which is typically the console. Unlike 'println', 'print' does not add a newline character after the output, meaning that subsequent print statements will continue writing on the same line. It's a fundamental tool for providing feedback and displaying results in a Java program.">printing</a> <a class="theory-lookup" href="/learn/step/3565" rel="noopener noreferrer nofollow" target="_blank" title="In Java, an integer number is a type of primitive data type that represents whole numbers, both positive and negative, as well as zero. | The most commonly used integer types are byte, short, int, and long, with int being the default type. These types can store numbers within specific ranges, with int being able to store numbers between -2,147,483,648 and 2,147,483,647.">integer numbers</a> from 0 to 9 on the same line.</p>
+<pre><code class="language-java">int n = 9;
+for (int i = 0; i &lt;= n; i++) {
+    System.out.print(i + " "); // here, a space is used to separate numbers
+}</code></pre>
+<p>The code displays:</p>
+<pre><code class="language-java">0 1 2 3 4 5 6 7 8 9 </code></pre>
+<p>The variables declared in the initialization statement are visible only inside the scope that includes all parts of the loop: the condition, the body, and the modification. The integer loop variables are often named <code class="language-java">i</code>, <code class="language-java">j</code>, <code class="language-java">k</code>, or <code class="language-java">index</code>.</p>
+<p>Here’s another example. Let's calculate the <a class="theory-lookup" href="/learn/step/3525" rel="noopener noreferrer nofollow" target="_blank" title="In Java, 'sum' is not a predefined keyword or term. | However, in programming, 'sum' is often used to refer to the total or combined value of multiple numbers or variables. For instance, if you have two integer variables 'a' and 'b', you might calculate their sum with the expression 'a + b'. This would give you the combined value of 'a' and 'b'. In Java, you could then store this sum in a new variable, say 'c', with the statement 'c = a + b'.">sum</a> of the integer numbers from 1 to 10 (inclusive) using the for-loop.</p>
+<pre><code class="language-java">int startIncl = 1, endExcl = 11;
+
+int sum = 0;
+for (int i = startIncl; i &lt; endExcl; i++) {
+    sum += i;
+}
+
+System.out.println(sum); // it prints "55"</code></pre>
+<h5 id="skipping-parts" style="text-align: center;">Skipping parts</h5>
+<p>The initialization statement, the condition, and the modification parts are optional, the for loop might not have all of them.</p>
+<p>It is possible to declare a variable outside the loop:</p>
+<p> </p>
+<pre><code class="language-java">int i = 10;
+for (; i &gt; 0; i--) {
+    System.out.print(i + " ");
+}</code></pre>
+<p>Moreover, it is also possible to write an <a class="theory-lookup" href="/learn/step/3498" rel="noopener noreferrer nofollow" target="_blank" title="An infinite loop in Java is a loop that keeps executing indefinitely because the condition that controls the loop never becomes false. | This can occur due to a programming error, such as forgetting to update a variable that is used in the loop's condition, or intentionally, for example, when a program needs to continuously monitor for certain events. Infinite loops can cause a program to become unresponsive or consume excessive system resources, so they should be used with caution.">infinite loop</a> without these parts at all:</p>
+<pre><code class="language-java">for (;;) {
+    // do something
+}</code></pre>
+<h5 id="nested-loops" style="text-align: center;">Nested loops</h5>
+<p>It's possible to nest one for-loop in another for-loop. This approach is used to process multidimensional structures like tables (matrices), data cubes, and so on.</p>
+<p> </p>
+<p>As an example, the following code prints the <a class="theory-lookup" href="/learn/step/3519" rel="noopener noreferrer nofollow" target="_blank" title="Multiplication in Java is a mathematical operation that combines two numbers, where one number is multiplied by another number to produce a third number, which is the product of the two original numbers. | Java supports multiplication for both integer and floating-point data types. The multiplication operation is performed using the asterisk (*) operator, and it has higher precedence than addition and subtraction operations. The result of multiplication is determined by multiplying the values of the two operands, and the data type of the result depends on the data types of the operands.">multiplication</a> table of numbers from 1 to 9 (inclusive).</p>
+<p> </p>
+<pre><code class="language-java">for (int i = 1; i &lt; 10; i++) {
+    for (int j = 1; j &lt; 10; j++) {
+        System.out.print(i * j + "\t");
+    }
+    System.out.println();
+}</code></pre>
+<p> </p>
+<p>It outputs:</p>
+<p> </p>
+<pre><code class="language-java">1   2   3   4   5   6   7   8   9  
+2   4   6   8   10  12  14  16  18  
+3   6   9   12  15  18  21  24  27  
+4   8   12  16  20  24  28  32  36  
+5   10  15  20  25  30  35  40  45  
+6   12  18  24  30  36  42  48  54  
+7   14  21  28  35  42  49  56  63  
+8   16  24  32  40  48  56  64  72  
+9   18  27  36  45  54  63  72  81 </code></pre>
+</div>
